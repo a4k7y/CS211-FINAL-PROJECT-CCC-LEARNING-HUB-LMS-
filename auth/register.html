@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e18">
+    <title>Create Account | CCC Learning Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/auth.js" defer></script>
+</head>
+
+<body class="auth-page" data-page="register">
+    <main class="auth-shell auth-shell-reversed">
+        <section class="brand-panel" aria-label="CCC Learning Hub">
+            <a class="brand-mark" href="../index.html" aria-label="CCC Learning Hub home">
+                <span class="brand-name">CCC <span>Learning Hub</span></span>
+            </a>
+            <div class="brand-copy">
+                <p class="eyebrow">Become an Iskolar ng Calamba</p>
+                <h1>One campus.<br>Many possibilities.</h1>
+                <p>Create your student account, then add the details that make your profile yours.</p>
+            </div>
+            <p class="copyright">&copy; 2026 CCC Learning Hub</p>
+        </section>
+
+        <section class="form-panel" aria-labelledby="register-title">
+            <div class="form-wrap">
+                <p class="eyebrow form-eyebrow">Step 1 of 2</p>
+                <h2 id="register-title">Create your account</h2>
+                <p class="form-intro">Registration is for CCC students with a school email.</p>
+                <form id="register-form" novalidate>
+                    <label for="email">CCC email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="name@ccc.edu.ph"
+                        required>
+
+                    <label for="password">Create password</label>
+                    <div class="password-field">
+                        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8"
+                            required>
+                        <button class="password-toggle" type="button" data-toggle-password="password"
+                            aria-label="Show password">Show</button>
+                    </div>
+                    <p class="field-hint">Use at least 8 characters.</p>
+
+                    <label for="confirm-password">Confirm password</label>
+                    <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password"
+                        minlength="8" required>
+
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                    <button class="primary-button" type="submit">Continue to profile <span
+                            aria-hidden="true">&#8594;</span></button>
+                </form>
+                <p class="switch-prompt">Already registered? <a href="login.html">Sign in</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

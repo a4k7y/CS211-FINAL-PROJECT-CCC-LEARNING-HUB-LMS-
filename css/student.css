@@ -1,0 +1,312 @@
+.student-avatar {
+  color: #d8f4ff;
+  background: linear-gradient(145deg, #438cae, #315c82);
+}
+
+.student-section-note {
+  color: var(--admin-muted);
+  font-size: 10px;
+}
+
+.course-progress {
+  height: 6px;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(157, 190, 232, 0.18);
+}
+
+.course-progress span {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6599f3, #55c3e9);
+}
+
+.course-progress-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  color: var(--admin-muted);
+  font-size: 9px;
+}
+
+.course-progress-label strong {
+  color: #d8e8ff;
+}
+
+.student-page .next-class-footer a {
+  color: #b8d7ff;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.student-page .next-class-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.due-panel {
+  padding: 17px 15px 10px;
+}
+
+.due-panel .section-heading {
+  margin-bottom: 10px;
+}
+
+.due-panel .compact-heading h2 {
+  font-size: 16px;
+}
+
+.due-count {
+  padding: 5px 7px;
+  border: 1px solid rgba(139, 186, 255, 0.25);
+  border-radius: 7px;
+  color: #c5ddff;
+  background: rgba(92, 142, 207, 0.16);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.due-assessment-list {
+  display: grid;
+}
+
+.due-assessment-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  padding: 11px 0;
+  border-top: 1px solid rgba(196, 220, 255, 0.1);
+}
+
+.due-type {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(146, 190, 255, 0.22);
+  border-radius: 8px;
+  color: #bfd9ff;
+  background: rgba(92, 142, 207, 0.16);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.assignment-type {
+  border-color: rgba(128, 215, 232, 0.2);
+  color: #aee8f0;
+  background: rgba(76, 165, 182, 0.13);
+}
+
+.due-assessment-info {
+  min-width: 0;
+}
+
+.due-assessment-info p,
+.due-time {
+  display: block;
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 9px;
+}
+
+.due-assessment-info p span {
+  color: #7893b4;
+  padding: 0 2px;
+}
+
+.due-assessment-info h3 {
+  overflow: hidden;
+  margin: 4px 0;
+  font-size: 11px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.due-time {
+  color: #a9c9f6;
+}
+
+.assessment-open-button {
+  min-width: 48px;
+  min-height: 30px;
+  padding: 0 8px;
+  border: 1px solid rgba(153, 195, 255, 0.28);
+  border-radius: 7px;
+  color: #d8e8ff;
+  background: rgba(85, 132, 194, 0.17);
+  font-size: 9px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.assessment-open-button:hover {
+  background: rgba(103, 156, 224, 0.3);
+}
+
+.due-empty {
+  margin: 15px 2px 8px;
+  color: #b9d8ff;
+  font-size: 11px;
+}
+
+.assessment-dialog {
+  width: min(560px, calc(100% - 28px));
+  max-height: min(760px, calc(100vh - 30px));
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(196, 220, 255, 0.24);
+  border-radius: 18px;
+  color: var(--admin-text);
+  background: linear-gradient(145deg, #2a4363, #1b2e48 75%);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
+}
+
+.assessment-dialog::backdrop {
+  background: rgba(5, 13, 24, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.assessment-form {
+  display: grid;
+  gap: 14px;
+  padding: 25px;
+}
+
+.assessment-dialog-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assessment-dialog-top .eyebrow {
+  margin: 0;
+  color: #a9ceff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.assessment-close {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  color: var(--admin-text);
+  background: rgba(16, 31, 50, 0.45);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.assessment-form h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.assessment-instructions {
+  margin: -6px 0 0;
+  color: var(--admin-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.assessment-fields {
+  display: grid;
+  gap: 14px;
+}
+
+.assessment-question {
+  min-width: 0;
+  margin: 0;
+  padding: 13px;
+  border: 1px solid var(--admin-border);
+  border-radius: 10px;
+  background: rgba(16, 31, 50, 0.32);
+}
+
+.assessment-question legend {
+  max-width: 100%;
+  padding: 0 4px;
+  color: #f2f7ff;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.assessment-answer {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 10px;
+  color: #cad8ea;
+  font-size: 11px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.assessment-answer input {
+  flex: 0 0 auto;
+  margin: 2px 0 0;
+  accent-color: #84baff;
+}
+
+.assessment-response-label {
+  color: #dceaff;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.assessment-response {
+  width: 100%;
+  min-height: 150px;
+  padding: 11px;
+  border: 1px solid var(--admin-border);
+  border-radius: 9px;
+  color: var(--admin-text);
+  background: rgba(16, 31, 50, 0.55);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.assessment-response:focus {
+  outline: 2px solid rgba(139, 186, 255, 0.68);
+  outline-offset: 1px;
+}
+
+.assessment-feedback {
+  min-height: 0;
+  margin: 0;
+  color: #ffb0b5;
+  font-size: 11px;
+}
+
+.assessment-feedback:empty {
+  display: none;
+}
+
+.assessment-form .small-primary {
+  min-height: 44px;
+}
+
+.student-page .completed-state {
+  color: #9ce2c2;
+  background: rgba(59, 145, 124, 0.14);
+}
+
+@media (max-width: 600px) {
+  .assessment-form {
+    gap: 12px;
+    padding: 19px;
+  }
+
+  .assessment-form h2 {
+    font-size: 19px;
+  }
+}

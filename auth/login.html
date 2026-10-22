@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e18">
+    <title>Sign In | CCC Learning Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/auth.js" defer></script>
+</head>
+
+<body class="auth-page" data-page="login">
+    <main class="auth-shell">
+        <section class="brand-panel" aria-label="CCC Learning Hub">
+            <a class="brand-mark" href="../index.html" aria-label="CCC Learning Hub home">
+                <span class="brand-name">CCC <span>Learning Hub</span></span>
+            </a>
+            <div class="brand-copy">
+                <p class="eyebrow">A campus community</p>
+                <h1>Your next chapter<br>starts here.</h1>
+                <p>Sign in with your CCC email to continue to your student profile.</p>
+            </div>
+            <p class="copyright">&copy; 2026 CCC Learning Hub</p>
+        </section>
+
+        <section class="form-panel" aria-labelledby="login-title">
+            <div class="form-wrap">
+                <p class="eyebrow form-eyebrow">Student access</p>
+                <h2 id="login-title">Welcome!</h2>
+                <p class="form-intro">Use the CCC account you registered with.</p>
+                <form id="login-form" novalidate>
+                    <label for="email">CCC email</label>
+                    <input id="email" name="email" type="email" autocomplete="username" placeholder="name@ccc.edu.ph"
+                        required>
+
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required>
+                        <button class="password-toggle" type="button" data-toggle-password="password"
+                            aria-label="Show password">Show</button>
+                    </div>
+                    <p class="forgot-link"><a href="forgot-password.html">Forgot password?</a></p>
+
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                    <button class="primary-button" type="submit">Sign in <span
+                            aria-hidden="true">&#8594;</span></button>
+                </form>
+                <p class="switch-prompt">New to CCC Learning Hub? <a href="register.html">Create an account!</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

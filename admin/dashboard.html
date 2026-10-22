@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#15243a">
+	<title>Professor Dashboard | CCC Learning Hub</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/admin.css">
+	<script src="../js/admin.js" defer></script>
+</head>
+
+<body class="admin-page">
+	<div class="admin-app">
+		<aside class="admin-sidebar" id="admin-sidebar">
+			<a class="admin-brand" href="../index.html">
+				<span>CCC <strong>Learning Hub</strong><small>Professor portal</small></span>
+			</a>
+
+			<p class="nav-label">Workspace</p>
+			<nav class="admin-nav" aria-label="Professor dashboard">
+				<a href="#dashboard" class="active" aria-current="page"><span aria-hidden="true">⌂</span> Overview</a>
+				<a href="#schedule"><span aria-hidden="true">◷</span> Schedule</a>
+				<a href="#quizzes"><span aria-hidden="true">▤</span> Quizzes</a>
+				<a href="#assignments"><span aria-hidden="true">▧</span> Assignments</a>
+				<a href="#exams"><span aria-hidden="true">▣</span> Exams</a>
+				<a href="#announcements"><span aria-hidden="true">◉</span> Announcements</a>
+				<a href="#my-classes"><span aria-hidden="true">▦</span> My Classes</a>
+			</nav>
+
+			<div class="sidebar-profile">
+				<div class="profile-avatar" aria-hidden="true">MR</div>
+				<div><strong>Prof. Maria Reyes</strong><span>Computer Science</span></div>
+				<a href="../auth/login.html" aria-label="Sign out" title="Sign out">↗</a>
+			</div>
+		</aside>
+
+		<main class="admin-main" id="dashboard">
+			<header class="admin-topbar">
+				<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation"
+					aria-controls="admin-sidebar" aria-expanded="false">☰</button>
+				<div class="page-heading">
+					<p class="eyebrow" id="today-date">Professor workspace</p>
+					<h1 id="greeting">Good morning, Professor</h1>
+				</div>
+				<label class="search-box">
+					<span aria-hidden="true">⌕</span>
+					<input id="dashboard-search" type="search" placeholder="Search classes, assessments..."
+						aria-label="Search dashboard">
+					<kbd>/</kbd>
+				</label>
+				<a class="notification-button" href="#announcements" aria-label="View announcements" title="Announcements">
+					<span aria-hidden="true">♧</span><i></i>
+				</a>
+			</header>
+
+			<p class="search-status" id="search-status" aria-live="polite"></p>
+
+			<section class="metric-grid" aria-label="Teaching summary">
+				<article class="metric-card">
+					<span class="metric-icon">◷</span>
+					<p>Classes today</p>
+					<strong>4</strong>
+					<span class="metric-detail">Next class at 9:45 AM</span>
+				</article>
+				<article class="metric-card">
+					<span class="metric-icon">▦</span>
+					<p>Active students</p>
+					<strong>83</strong>
+					<span class="metric-detail">Across 3 class sections</span>
+				</article>
+				<article class="metric-card">
+					<span class="metric-icon">▤</span>
+					<p>Assessments to review</p>
+					<strong>12</strong>
+					<span class="metric-detail">2 assessments submitted</span>
+				</article>
+			</section>
+
+			<div class="dashboard-grid">
+				<section class="panel schedule-panel" id="schedule" aria-labelledby="schedule-title">
+					<div class="section-heading">
+						<div>
+							<p class="eyebrow">Thursday · Week 8</p>
+							<h2 id="schedule-title">Today's schedule</h2>
+						</div>
+						<a class="text-link" href="#my-classes">View classes <span aria-hidden="true">→</span></a>
+					</div>
+
+					<div class="schedule-list">
+						<article class="schedule-row current" data-searchable>
+							<time><strong>8:00</strong><span>9:30 AM</span></time>
+							<div class="schedule-class">
+								<span class="course-code">CS 211 · BSCS 2A</span>
+								<h3>Programming Fundamentals</h3>
+								<p>Laboratory 3 <span>·</span> 28 students</p>
+							</div>
+							<span class="schedule-status live"><i></i> In progress</span>
+						</article>
+						<article class="schedule-row" data-searchable>
+							<time><strong>9:45</strong><span>11:15 AM</span></time>
+							<div class="schedule-class">
+								<span class="course-code">CS 214 · BSCS 2B</span>
+								<h3>Data Structures</h3>
+								<p>Room 402 <span>·</span> 31 students</p>
+							</div>
+							<span class="schedule-status upcoming">In 20 min</span>
+						</article>
+						<article class="schedule-row" data-searchable>
+							<time><strong>1:00</strong><span>2:30 PM</span></time>
+							<div class="schedule-class">
+								<span class="course-code">CS 220 · BSIT 3A</span>
+								<h3>Database Systems</h3>
+								<p>Room 215 <span>·</span> 24 students</p>
+							</div>
+							<span class="schedule-status">Room 215</span>
+						</article>
+						<article class="schedule-row" data-searchable>
+							<time><strong>3:00</strong><span>4:30 PM</span></time>
+							<div class="schedule-class">
+								<span class="course-code">CS 211 · Open session</span>
+								<h3>Student consultation</h3>
+								<p>Faculty office <span>·</span> 12 booked</p>
+							</div>
+							<span class="schedule-status">Consultation</span>
+						</article>
+					</div>
+				</section>
+
+				<aside class="right-column">
+					<section class="panel next-class-panel" aria-labelledby="next-class-title">
+						<div class="section-heading compact-heading">
+							<div><p class="eyebrow">Up next</p><h2 id="next-class-title">Data Structures</h2></div>
+							<span class="class-number">02</span>
+						</div>
+						<p class="next-class-meta">CS 214 <span>·</span> BSCS 2B</p>
+						<div class="countdown"><strong>20</strong><span>minutes until class</span></div>
+						<div class="next-class-footer"><span>Room 402</span><span>31 students</span></div>
+					</section>
+
+					<section class="panel mini-announcements" aria-labelledby="latest-announcement-title">
+						<div class="section-heading compact-heading">
+							<div><p class="eyebrow">Stay in the loop</p><h2 id="latest-announcement-title">Latest announcement</h2></div>
+						</div>
+						<p class="announcement-title">Lab schedule update</p>
+						<p class="announcement-copy">CS 211 afternoon lab will meet in Laboratory 3 this week.</p>
+						<a class="text-link" href="#announcements">All announcements <span aria-hidden="true">→</span></a>
+					</section>
+				</aside>
+			</div>
+
+			<section class="content-section" id="my-classes" aria-labelledby="classes-title">
+				<div class="section-heading">
+					<div><p class="eyebrow">Your teaching load</p><h2 id="classes-title">My classes</h2></div>
+					<a class="text-link" href="#schedule">Today's schedule <span aria-hidden="true">→</span></a>
+				</div>
+				<div class="class-grid">
+					<article class="class-card" data-searchable>
+						<div class="class-card-top"><span class="class-tag blue-tag">CS 211</span><span>BSCS 2A</span></div>
+						<h3>Programming Fundamentals</h3>
+						<p>Monday, Thursday <span>·</span> 8:00 AM</p>
+						<div class="class-card-footer"><span>28 students</span><a href="#quizzes" aria-label="View CS 211 quizzes">View quizzes →</a></div>
+					</article>
+					<article class="class-card" data-searchable>
+						<div class="class-card-top"><span class="class-tag cyan-tag">CS 214</span><span>BSCS 2B</span></div>
+						<h3>Data Structures</h3>
+						<p>Tuesday, Thursday <span>·</span> 9:45 AM</p>
+						<div class="class-card-footer"><span>31 students</span><a href="#quizzes" aria-label="View CS 214 quizzes">View quizzes →</a></div>
+					</article>
+					<article class="class-card" data-searchable>
+						<div class="class-card-top"><span class="class-tag violet-tag">CS 220</span><span>BSIT 3A</span></div>
+						<h3>Database Systems</h3>
+						<p>Wednesday, Thursday <span>·</span> 1:00 PM</p>
+						<div class="class-card-footer"><span>24 students</span><a href="#quizzes" aria-label="View CS 220 quizzes">View quizzes →</a></div>
+					</article>
+				</div>
+			</section>
+
+			<section class="content-section" id="quizzes" aria-labelledby="quizzes-title">
+				<div class="section-heading">
+					<div><p class="eyebrow">Short assessments</p><h2 id="quizzes-title">Quizzes</h2></div>
+				</div>
+				<div class="quiz-layout">
+					<div class="panel quiz-list" id="quiz-list">
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">Q</span>
+							<div><h3>Arrays and loops</h3><p>CS 211 <span>·</span> Due Oct 24</p></div>
+							<span class="quiz-state review-state">12 to review</span>
+						</article>
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">Q</span>
+							<div><h3>Tree traversal</h3><p>CS 214 <span>·</span> Due Oct 27</p></div>
+							<span class="quiz-state open-state">Opens tomorrow</span>
+						</article>
+					</div>
+					<form class="panel quick-form" id="quiz-composer">
+						<h3>Create a quiz</h3>
+						<label for="quiz-title">Quiz title</label>
+						<input id="quiz-title" name="title" placeholder="e.g. Recursion review" required>
+						<label for="quiz-course">Class</label>
+						<select id="quiz-course" name="course">
+							<option>CS 211</option>
+							<option>CS 214</option>
+							<option>CS 220</option>
+						</select>
+						<button class="small-primary" type="submit">Add quiz <span aria-hidden="true">→</span></button>
+					</form>
+				</div>
+			</section>
+
+			<section class="content-section" id="assignments" aria-labelledby="assignments-title">
+				<div class="section-heading">
+					<div><p class="eyebrow">Coursework</p><h2 id="assignments-title">Assignments</h2></div>
+				</div>
+				<div class="quiz-layout">
+					<div class="panel quiz-list" id="assignment-list">
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">A</span>
+							<div><h3>Array processing lab</h3><p>CS 211 <span>·</span> Due Oct 25</p></div>
+							<span class="quiz-state review-state">8 to grade</span>
+						</article>
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">A</span>
+							<div><h3>Database schema project</h3><p>CS 220 <span>·</span> Due Oct 29</p></div>
+							<span class="quiz-state open-state">In progress</span>
+						</article>
+					</div>
+					<form class="panel quick-form" id="assignment-composer">
+						<h3>Create an assignment</h3>
+						<label for="assignment-title">Assignment title</label>
+						<input id="assignment-title" name="title" placeholder="e.g. Linked list lab" required>
+						<label for="assignment-course">Class</label>
+						<select id="assignment-course" name="course">
+							<option>CS 211</option>
+							<option>CS 214</option>
+							<option>CS 220</option>
+						</select>
+						<button class="small-primary" type="submit">Add assignment <span aria-hidden="true">→</span></button>
+					</form>
+				</div>
+			</section>
+
+			<section class="content-section" id="exams" aria-labelledby="exams-title">
+				<div class="section-heading">
+					<div><p class="eyebrow">Scheduled assessments</p><h2 id="exams-title">Exams</h2></div>
+				</div>
+				<div class="quiz-layout">
+					<div class="panel quiz-list" id="exam-list">
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">E</span>
+							<div><h3>Midterm examination</h3><p>CS 211 <span>·</span> Oct 30, 9:00 AM</p></div>
+							<span class="quiz-state open-state">Scheduled</span>
+						</article>
+						<article class="quiz-row" data-searchable>
+							<span class="quiz-icon">E</span>
+							<div><h3>Practical exam</h3><p>CS 214 <span>·</span> Nov 4, 1:00 PM</p></div>
+							<span class="quiz-state open-state">Scheduled</span>
+						</article>
+					</div>
+					<form class="panel quick-form" id="exam-composer">
+						<h3>Schedule an exam</h3>
+						<label for="exam-title">Exam title</label>
+						<input id="exam-title" name="title" placeholder="e.g. Final examination" required>
+						<label for="exam-course">Class</label>
+						<select id="exam-course" name="course">
+							<option>CS 211</option>
+							<option>CS 214</option>
+							<option>CS 220</option>
+						</select>
+						<button class="small-primary" type="submit">Add exam <span aria-hidden="true">→</span></button>
+					</form>
+				</div>
+			</section>
+
+			<section class="content-section" id="announcements" aria-labelledby="announcements-title">
+				<div class="section-heading">
+					<div><p class="eyebrow">Class updates</p><h2 id="announcements-title">Announcements</h2></div>
+				</div>
+				<div class="announcement-layout">
+					<div class="announcement-list" id="announcement-list">
+						<article class="announcement-item" data-searchable>
+							<span class="announcement-dot"></span>
+							<div><p class="announcement-meta">CS 211 <span>·</span> Today, 8:10 AM</p><h3>Lab schedule update</h3><p>Our afternoon lab will meet in Laboratory 3 this week.</p></div>
+						</article>
+						<article class="announcement-item" data-searchable>
+							<span class="announcement-dot cyan-dot"></span>
+							<div><p class="announcement-meta">All classes <span>·</span> Yesterday</p><h3>Midterm consultation hours</h3><p>Drop by the faculty office this Friday from 1:00 to 3:00 PM.</p></div>
+						</article>
+					</div>
+					<form class="panel quick-form announcement-form" id="announcement-form">
+						<h3>Post an announcement</h3>
+						<label for="announcement-class">Class</label>
+						<select id="announcement-class" name="course">
+							<option>All classes</option>
+							<option>CS 211</option>
+							<option>CS 214</option>
+							<option>CS 220</option>
+						</select>
+						<label for="announcement-message">Message</label>
+						<textarea id="announcement-message" name="message" rows="3" placeholder="Share an update with your students..." required></textarea>
+						<button class="small-primary" type="submit">Post announcement <span aria-hidden="true">→</span></button>
+					</form>
+				</div>
+			</section>
+			<footer class="admin-footer">CCC Learning Hub <span>·</span> Professor workspace</footer>
+		</main>
+	</div>
+</body>
+
+</html>

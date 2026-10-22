@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e18">
+    <title>Complete Profile | CCC Learning Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/auth.js" defer></script>
+</head>
+
+<body class="auth-page profile-page" data-page="profile">
+    <main class="profile-shell">
+        <header class="profile-header">
+            <a class="brand-mark profile-brand-mark" href="../index.html" aria-label="CCC Learning Hub home">
+                <span class="brand-name">CCC <span>Learning Hub</span></span>
+            </a>
+            <p class="step-indicator"><span>02</span> / 02 &nbsp; Profile details</p>
+        </header>
+
+        <section class="profile-content" aria-labelledby="profile-title">
+            <div class="profile-intro">
+                <p class="eyebrow">Your student profile</p>
+                <h1 id="profile-title">Let's put a name to your account.</h1>
+                <p>Complete your details to finish setting up CCC Learning Hub.</p>
+            </div>
+
+            <form id="profile-form" novalidate>
+                <div class="profile-form-grid">
+                    <div class="photo-column">
+                        <div class="photo-preview" id="photo-preview" aria-label="Profile photo preview">
+                            <span id="photo-placeholder" aria-hidden="true">+</span>
+                            <img id="photo-image" alt="Selected profile photo" hidden>
+                        </div>
+                        <label class="photo-picker" for="profile-photo">Add a photo</label>
+                        <input class="visually-hidden" id="profile-photo" name="profile-photo" type="file"
+                            accept="image/*">
+                        <p class="field-hint photo-hint">Optional, up to 1.5 MB</p>
+                    </div>
+
+                    <div class="profile-fields">
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="surname">Surname</label>
+                                <input id="surname" name="surname" autocomplete="family-name" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="first-name">First name</label>
+                                <input id="first-name" name="first-name" autocomplete="given-name" required>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="middle-name">Middle name <span>(optional)</span></label>
+                                <input id="middle-name" name="middle-name" autocomplete="additional-name">
+                            </div>
+                            <div class="field-group">
+                                <label for="suffix">Suffix <span>(optional)</span></label>
+                                <select id="suffix" name="suffix">
+                                    <option value="">None</option>
+                                    <option>Jr.</option>
+                                    <option>Sr.</option>
+                                    <option>II</option>
+                                    <option>III</option>
+                                    <option>IV</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-row field-row-last">
+                            <div class="field-group age-field">
+                                <label for="age">Age</label>
+                                <input id="age" name="age" type="number" min="1" max="120" inputmode="numeric" required>
+                            </div>
+                            <div class="field-group address-field">
+                                <label for="address">Complete home address</label>
+                                <input id="address" name="address" autocomplete="street-address" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                <div class="profile-submit-row">
+                    <button class="primary-button" type="submit">Save profile <span
+                            aria-hidden="true">&#8594;</span></button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
